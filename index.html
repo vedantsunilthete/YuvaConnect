@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YuvaConnect - Connecting People to Opportunities</title>
+  <meta name="description" content="YuvaConnect: A Community Engagement Project by SNJB COE students, Chandwad connecting job seekers across Nashik district to opportunities, resume building, and career guidance.">
+  
+  <!-- Inline SVG Favicon as Data URI (Orange-gradient tile with Devanagari यु) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='fav-g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23F97316'/%3E%3Cstop offset='100%25' stop-color='%239A3412'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23fav-g)'/%3E%3Ctext x='32' y='46' font-size='38' font-weight='bold' fill='%23FFFFFF' text-anchor='middle' font-family='sans-serif'%3E%E0%A4%AF%E0%A5%81%3C/text%3E%3C/svg%3E">
+
+  <!-- ONLY ONE allowed Google Fonts link (Poppins 400,500,600,700,800 and Noto Sans Devanagari 400,500,600,700 with display=swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Inline SVG Symbol Sprite for Reusable Outline Icons (24px grid, stroke currentColor, stroke-width 2, round caps/joins) -->
+  <svg style="display: none;" aria-hidden="true" focusable="false">
+    <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="2" y1="12" x2="22" y2="12"></line>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+    </symbol>
+    <symbol id="icon-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="16" y1="13" x2="8" y2="13"></line>
+      <line x1="16" y1="17" x2="8" y2="17"></line>
+      <polyline points="10 9 9 9 8 9"></polyline>
+    </symbol>
+    <symbol id="icon-book-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+    </symbol>
+    <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+      <line x1="9" y1="22" x2="9" y2="22.01"></line>
+      <line x1="15" y1="22" x2="15" y2="22.01"></line>
+      <line x1="8" y1="6" x2="8" y2="6.01"></line>
+      <line x1="16" y1="6" x2="16" y2="6.01"></line>
+      <line x1="8" y1="10" x2="8" y2="10.01"></line>
+      <line x1="16" y1="10" x2="16" y2="10.01"></line>
+      <line x1="8" y1="14" x2="8" y2="14.01"></line>
+      <line x1="16" y1="14" x2="16" y2="14.01"></line>
+      <line x1="8" y1="18" x2="8" y2="18.01"></line>
+      <line x1="16" y1="18" x2="16" y2="18.01"></line>
+    </symbol>
+    <symbol id="icon-layout-dashboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="7" height="9"></rect>
+      <rect x="14" y="3" width="7" height="5"></rect>
+      <rect x="14" y="12" width="7" height="9"></rect>
+      <rect x="3" y="16" width="7" height="5"></rect>
+    </symbol>
+    <symbol id="icon-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      <polyline points="9 12 11 14 15 10"></polyline>
+    </symbol>
+    <symbol id="icon-alert-triangle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+      <line x1="12" y1="9" x2="12" y2="13"></line>
+      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+      <circle cx="12" cy="10" r="3"></circle>
+    </symbol>
+    <symbol id="icon-languages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m5 8 6 6"></path>
+      <path d="m4 14 6-6 2-3"></path>
+      <path d="M2 5h12"></path>
+      <path d="M7 2h1"></path>
+      <path d="m22 22-5-10-5 10"></path>
+      <path d="M14 18h6"></path>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+    </symbol>
+    <symbol id="icon-ban" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+    </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </symbol>
+    <symbol id="icon-printer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 6 2 18 2 18 9"></polyline>
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+      <rect x="6" y="14" width="12" height="8"></rect>
+    </symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="3 6 5 6 21 6"></polyline>
+      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </symbol>
+  </svg>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link" data-i18n="skip_to_main">Skip to main content</a>
+
+  <!-- 1. TOP INFO BAR (dark navy strip #0A2A4A) -->
+  <aside class="top-info-bar" aria-label="Project Information & Role Switcher">
+    <div class="container top-info-container">
+      <div class="top-info-left">
+        <span class="status-dot-green" aria-hidden="true"></span>
+        <span class="top-info-text" data-i18n="top_bar_project">Nashik District Community Engagement Project (CEP)</span>
+      </div>
+      <div class="top-info-right">
+        <!-- Role Pill Switcher with user icon, custom select, and SIMULATED badge -->
+        <div class="role-pill-wrapper">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#icon-user"></use></svg>
+          <label for="demo-role-select" class="role-pill-label">Role:</label>
+          <select id="demo-role-select" class="role-pill-select" aria-label="Simulated demo user role">
+            <option value="guest">Guest</option>
+            <option value="jobseeker">Seeker</option>
+            <option value="employer">Employer</option>
+            <option value="admin">Admin</option>
+          </select>
+          <svg class="icon icon-xs role-pill-arrow" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+          <span class="badge-simulated" aria-hidden="true">SIMULATED</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. HEADER (white, thin bottom border) -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Left: Logo + Wordmark + Badge + Subtitle -->
+      <a href="#/home" class="brand-link" aria-label="YuvaConnect Home">
+        <div class="brand-tile" aria-hidden="true">
+          <span class="brand-tile-letter">यु</span>
+        </div>
+        <div class="brand-info">
+          <div class="brand-title-row">
+            <span class="brand-title-yuva">Yuva</span><span class="brand-title-connect">Connect</span>
+            <span class="brand-inline-badge">युवा</span>
+          </div>
+          <span class="brand-subtitle">Nashik Opportunity Platform</span>
+        </div>
+      </a>
+
+      <!-- Middle: Navigation with outline icons -->
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+        <ul class="nav-list" id="nav-list">
+          <li class="nav-item">
+            <a href="#/jobs" class="nav-link" data-route="jobs">
+              <svg class="icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg>
+              <span data-i18n="nav_jobs">Find Jobs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#/resume" class="nav-link" data-route="resume">
+              <svg class="icon" aria-hidden="true"><use href="#icon-file-text"></use></svg>
+              <span data-i18n="nav_resume">Resume Builder</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#/guidance" class="nav-link" data-route="guidance">
+              <svg class="icon" aria-hidden="true"><use href="#icon-book-open"></use></svg>
+              <span data-i18n="nav_guidance">Career Guidance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#/employer" class="nav-link" data-route="employer">
+              <svg class="icon" aria-hidden="true"><use href="#icon-building"></use></svg>
+              <span data-i18n="nav_employer">Employer Portal</span>
+            </a>
+          </li>
+          <li class="nav-item nav-item-jobseeker" id="nav-item-dashboard" style="display: none;">
+            <a href="#/dashboard" class="nav-link" data-route="dashboard">
+              <svg class="icon" aria-hidden="true"><use href="#icon-layout-dashboard"></use></svg>
+              <span data-i18n="nav_dashboard">My Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item nav-item-admin" id="nav-item-admin" style="display: none;">
+            <a href="#/admin" class="nav-link" data-route="admin">
+              <svg class="icon" aria-hidden="true"><use href="#icon-shield-check"></use></svg>
+              <span data-i18n="nav_admin">Admin Console</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right: Language Button & Mobile Menu Toggle -->
+      <div class="header-right-controls">
+        <button type="button" class="lang-toggle-btn" id="btn-lang-toggle" aria-label="Toggle language">
+          <svg class="icon icon-sm" aria-hidden="true"><use href="#icon-globe"></use></svg>
+          <span id="lang-btn-text">मराठी</span>
+        </button>
+
+        <button type="button" class="menu-toggle-btn" id="menu-toggle-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+          <svg class="icon menu-open-icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+          <svg class="icon menu-close-icon" aria-hidden="true" style="display:none;"><use href="#icon-x"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. DEMO BANNER (Slim strip, directly under the header) -->
+  <aside class="demo-banner" aria-label="Demo simulated notice">
+    <div class="container demo-banner-content">
+      <span class="demo-banner-badge" data-i18n="demo_badge">SIMULATED</span>
+      <p class="demo-banner-text" data-i18n="demo_banner_text">
+        Demo version: sign-in, employer and admin features are simulated in this browser. No data is sent anywhere.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Notification Toast Region -->
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Screen-reader Announcements Live Region -->
+  <div id="sr-announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main Content View Container -->
+  <main id="main-content" tabindex="-1">
+    <div id="app-root" class="container main-container">
+      <!-- Dynamically populated by router render functions -->
+    </div>
+  </main>
+
+  <!-- 13. FOOTER (dark navy background #0B1B33, white text) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Col 1: About & CEP Statement -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="footer-brand-yuva">Yuva</span><span class="footer-brand-connect">Connect</span>
+            <p class="footer-tagline" data-i18n="tagline">Connecting People to Opportunities</p>
+          </div>
+          <p class="footer-mission" data-i18n="footer_cep_note">
+            A Community Engagement Project (CEP) by SNJB COE students, Chandwad, Nashik district, Maharashtra, India.
+          </p>
+          <p class="footer-disclaimer" data-i18n="footer_disclaimer">
+            YuvaConnect never claims to guarantee employment. It only improves access to opportunities and job readiness.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h2 class="footer-heading" data-i18n="footer_quick_links">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="#/home" data-i18n="nav_home">Home</a></li>
+            <li><a href="#/jobs" data-i18n="nav_jobs">Find Jobs</a></li>
+            <li><a href="#/resume" data-i18n="nav_resume">Resume Builder</a></li>
+            <li><a href="#/guidance" data-i18n="nav_guidance">Career Guidance</a></li>
+            <li><a href="#/employer" data-i18n="nav_employer">Employer Portal</a></li>
+            <li><a href="#/dashboard" data-i18n="nav_dashboard">My Dashboard</a></li>
+            <li><a href="#/admin" data-i18n="nav_admin">Admin Console</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Information & Policies -->
+        <div class="footer-col">
+          <h2 class="footer-heading" data-i18n="footer_information">Information</h2>
+          <ul class="footer-links">
+            <li><a href="#/about" data-i18n="nav_about">About YuvaConnect</a></li>
+            <li><a href="#/contact" data-i18n="nav_contact">Contact Us</a></li>
+            <li><a href="#/privacy" data-i18n="nav_privacy">Privacy Policy</a></li>
+            <li><a href="#/terms" data-i18n="nav_terms">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Official Contact (Section 8 details) -->
+        <div class="footer-col">
+          <h2 class="footer-heading" data-i18n="footer_contact_info">Contact &amp; College</h2>
+          <address class="footer-address">
+            <p><strong>Organisation:</strong> SNJB COE, Chandwad</p>
+            <p><strong>Location:</strong> Chandwad, Nashik</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:vedantsunilthete391@gmail.com" class="footer-link-text">vedantsunilthete391@gmail.com</a>
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:7499122957" class="footer-link-text">7499122957</a>
+            </p>
+            <p>
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/917499122957" target="_blank" rel="noopener noreferrer" class="footer-link-text">Chat on WhatsApp</a>
+            </p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n="footer_copyright">
+          &copy; 2026 YuvaConnect | SNJB COE, Chandwad Students Community Engagement Project.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Accessible Dialog Container for Confirmations and Reports -->
+  <dialog id="app-dialog" class="app-dialog" aria-modal="true" aria-labelledby="dialog-title">
+    <div class="dialog-content" id="dialog-content">
+      <!-- Populated dynamically by showAccessibleDialog() -->
+    </div>
+  </dialog>
+
+  <!-- Application Logic (Plain script, file:// compatible) -->
+  <script src="script.js"></script>
+</body>
+</html>
